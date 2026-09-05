@@ -1,0 +1,48 @@
+
+⚡
+Règles et contraintes Moulinette
+Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
+Énoncé
+
+Écris une fonction qui vérifie si la chaîne 'small' est une sous-suite (subsequence) de 'big'. Une sous-suite signifie que tous les caractères de 'small' apparaissent dans 'big' dans le même ordre, mais pas nécessairement de manière consécutive. La fonction est sensible à la casse.
+
+Signature de la fonction
+
+def hidenp(small: str, big: str) -> bool:
+
+Exemples:
+
+Entrée
+hidenp("abc", "a1b2c3")
+Sortie
+True
+
+Entrée
+hidenp("ace", "abcde")
+Sortie
+True
+
+Entrée
+hidenp("aec", "abcde")
+Sortie
+False
+
+Entrée
+hidenp("", "abc")
+Sortie
+True
+
+Entrée
+hidenp("abc", "ab")
+Sortie
+False
+
+Entrée
+hidenp("aaaa", "aaa")
+Sortie
+False
+
+Entrée
+hidenp("sing","subsequence testing")
+Sortie
+True

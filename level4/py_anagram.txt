@@ -1,0 +1,43 @@
+
+⚡
+Règles et contraintes Moulinette
+Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
+Énoncé
+
+Écris une fonction qui vérifie si deux chaînes sont des anagrammes. Elles doivent contenir exactement les mêmes lettres avec les mêmes quantités, en ignorant la casse et les espaces.
+
+Signature de la fonction
+
+def anagram(s1: str, s2: str) -> bool:
+
+Exemples:
+
+Entrée
+anagram("listen", "silent")
+Sortie
+True
+
+Entrée
+anagram("Triangle", "Integral")
+Sortie
+True
+
+Entrée
+anagram("Dormitory", "Dirty Room")
+Sortie
+True
+
+Entrée
+anagram("hello", "world")
+Sortie
+False
+
+Entrée
+anagram("", "")
+Sortie
+True
+
+Entrée
+anagram("abc", "abcc")
+Sortie
+False

@@ -1,0 +1,38 @@
+
+⚡
+Règles et contraintes Moulinette
+Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
+Énoncé
+
+Écris une fonction qui renvoie une chaîne contenant les caractères qui apparaissent dans les deux chaînes, sans répétition. Les caractères sont ajoutés dans l'ordre où ils apparaissent dans la première chaîne.
+
+Signature de la fonction
+
+def inter(s1: str, s2: str) -> str:
+
+Exemples:
+
+Entrée
+inter("hello", "world")
+Sortie
+"lo"
+
+Entrée
+inter("banana", "band")
+Sortie
+"ban"
+
+Entrée
+inter("abcabc", "bc")
+Sortie
+"bc"
+
+Entrée
+inter("abc", "xyz")
+Sortie
+""
+
+Entrée
+inter("", "abc")
+Sortie
+""

@@ -1,0 +1,45 @@
+
+⚡
+Règles et contraintes Moulinette
+Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
+Énoncé
+
+Écris une fonction qui miroite une matrice 2D horizontalement en inversant chaque ligne.
+
+La fonction doit :
+- Prendre une liste 2D (matrice) d’entiers en entrée
+- Retourner une nouvelle liste 2D où chaque ligne est inversée horizontalement
+- Gérer des matrices de toute taille (carrées ou rectangulaires)
+- Conserver l’ordre d’origine des lignes
+- Ne pas modifier la matrice d’origine
+
+Signature de la fonction
+
+def mirror_matrix(matrix: list[list[int]]) -> list[list[int]]:
+
+Exemples:
+
+Entrée
+mirror_matrix([[1,2,3],[4,5,6]])
+Sortie
+[[3,2,1],[6,5,4]]
+
+Entrée
+mirror_matrix([[1,2],[3,4],[5,6]])
+Sortie
+[[2,1],[4,3],[6,5]]
+
+Entrée
+mirror_matrix([[7]])
+Sortie
+[[7]]
+
+Entrée
+mirror_matrix([[1,2,3,4]])
+Sortie
+[[4,3,2,1]]
+
+Entrée
+mirror_matrix([[-1,-2],[-3,-4]])
+Sortie
+[[-2,-1],[-4,-3]]
