@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""
 Règles et contraintes Moulinette
 Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
 Énoncé
@@ -13,7 +15,7 @@ La fonction doit :
 
 Signature de la fonction
 
-def bracket_validator(s: str) -> bool:
+#def bracket_validator(s: str) -> bool:
 
 Exemples:
 
@@ -56,3 +58,26 @@ Entrée
 bracket_validator("")
 Sortie
 True
+"""
+def bracket_validator(s: str) -> bool:
+	stack = []
+	for c in s:
+		if c == "{":
+			stack.append("}")
+		elif c == "(":
+			stack.append(")")
+		elif c == "[":
+			stack.append("]")
+		elif c == ")" or c == "]" or c == "}":
+			if len(stack) == 0:
+				return False
+			if stack[-1] != c:
+				return False
+			stack.pop()
+	
+	if len(stack) == 0:
+		return True
+	else:
+		return False
+if __name__ == "__main__":
+	print(bracket_validator("([)]"))

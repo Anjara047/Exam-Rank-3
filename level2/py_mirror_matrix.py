@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python3
+"""
 ⚡
 Règles et contraintes Moulinette
 Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
@@ -43,3 +44,16 @@ Entrée
 mirror_matrix([[-1,-2],[-3,-4]])
 Sortie
 [[-2,-1],[-4,-3]]
+"""
+def mirror_matrix(matrix: list[list[int]]) -> list[list[int]]:
+    result = []
+    for number in matrix:
+        result.append(number[::-1])
+    return result
+
+if __name__ == "__main__":
+    print(mirror_matrix([[1,2,3],[4,5,6]]))
+    print(mirror_matrix([[1,2],[3,4],[5,6]]))
+    print(mirror_matrix([[7]]))
+    print(mirror_matrix([[1,2,3,4]]))
+    print(mirror_matrix([[-1,-2],[-3,-4]]))

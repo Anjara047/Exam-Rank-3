@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""
 Règles et contraintes Moulinette
 Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
 Énoncé
@@ -44,3 +46,23 @@ Entrée
 echo_validator("")
 Sortie
 False
+"""
+def echo_validator(text: str) -> bool:
+    if text == "":
+        return False
+    clean = ""
+    for char in text:
+        if char != " ":
+            clean += char.lower()
+    if clean == clean[::-1]:
+        return True
+    return False
+
+if __name__ == "__main__":
+    print(echo_validator("racecar"))
+    print(echo_validator("A man a plan a canal Panama"))
+    print(echo_validator("race a car"))
+    print(echo_validator("Was it a car or a cat I saw"))
+    print(echo_validator("hello"))
+    print(echo_validator("Madam Im Adam"))
+    print(echo_validator(""))

@@ -1,5 +1,5 @@
-
-⚡
+#!/usr/bin/env python3
+"""
 Règles et contraintes Moulinette
 Fonctions autorisées : Aucune. Utilisez uniquement les fonctions autorisées pour éviter un zéro le jour de l’examen.
 Énoncé
@@ -59,3 +59,26 @@ Entrée
 string_permutation_checker("a gentleman","elegant man")
 Sortie
 True
+"""
+def string_permutation_checker(s1: str, s2: str) -> bool:
+    if s1 == "" and s2 == "":
+        return True
+    if s1 == "" or s2 == "":
+        return False
+    for c in s1:
+        if c in s2:
+            if len(s1) == len(s2):
+                return True
+            else:
+                return False
+        else:
+            return False
+if __name__ == "__main__":
+    print(string_permutation_checker("abc", "bca"))
+    print(string_permutation_checker("abc", "def"))
+    print(string_permutation_checker("listen", "silent"))
+    print(string_permutation_checker("hello", "bello"))
+    print(string_permutation_checker("", ""))
+    print(string_permutation_checker("a", ""))
+    print(string_permutation_checker("Abc", "abc"))
+    print(string_permutation_checker("a gentleman","elegant man"))
