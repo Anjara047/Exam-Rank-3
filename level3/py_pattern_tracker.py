@@ -44,9 +44,11 @@ def pattern_tracker(text: str) -> int:
     count = 0
     i = 0
     while i < len(text) - 1:
-        if '0' <= text[i] <= '9' and '0' <= text[i + 1] <= '9':
+        try:
             if int(text[i + 1]) == int(text[i]) + 1:
                 count += 1
+        except:
+            pass
         i += 1
     return count
 
