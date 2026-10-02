@@ -39,18 +39,9 @@ Sortie
 """
 def inter(s1: str, s2: str) -> str:
     result = ""
-    seen = set()
-
-    i = 0
-    while i < len(s1):
-        j = 0
-        while j < len(s2):
-            if s1[i] == s2[j] and s1[i] not in seen:
-                result += s1[i]
-                seen.add(s1[i])
-                break
-            j = j + 1
-        i = i + 1
+    for char in s1:
+        if char in s2 and char not in result:
+            result += char
     return result
 
 if __name__ == "__main__":

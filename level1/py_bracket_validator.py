@@ -74,10 +74,17 @@ def bracket_validator(s: str) -> bool:
 			if stack[-1] != c:
 				return False
 			stack.pop()
-	
+
 	if len(stack) == 0:
 		return True
 	else:
 		return False
 if __name__ == "__main__":
+	print(bracket_validator("()"))
+	print(bracket_validator("()[]{}"))
+	print(bracket_validator("(]"))
 	print(bracket_validator("([)]"))
+	print(bracket_validator("{[]}"))
+	print(bracket_validator("hello(world)"))
+	print(bracket_validator("((())"))
+	print(bracket_validator(""))

@@ -43,7 +43,7 @@ def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
         result.append(c)
     for c in list2:
         result.append(c)
-    return result
+    return sorted(result)
 
 if __name__ == "__main__":
     print(shadow_merge([1,3,5], [2,4,6]))
